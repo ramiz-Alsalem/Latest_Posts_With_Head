@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0
+}
+:root {
+    --main-color: #ff5722;
+    --text-color: #959798;
+}
+body {
+    font-family: "Alumni Sans";
+}
+ul {
+    list-style: none
+}
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px
+    }
+}
+header {
+    margin-top: 30px;
+    position: relative;
+}
+header .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+header .container div {
+    font-size: 24px;
+    width: 130px;
+    height: 50px;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+header .container div:first-child::before {
+    content: '';
+    width: 220%;
+    height: 50px;
+    background-color: #ff56227e;
+    position: absolute;
+    left: -220%;
+}
+header > div:first-child::after {
+    content: '';
+    width: 78%;
+    position: absolute;
+    background-color: #959798a1;
+    height: 2px;
+    right: 0;
+    top: 50%;
+    translate: 0 -50%;
+}
+@media (min-width: 664px) and (max-width: 814px) {
+    header > div:first-child::after {
+        width: 84%;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    header > div:first-child::after {
+        width: 85%;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1426px) {
+    header > div:first-child::after {
+        width: 90%;
+    }
+}
+@media (min-width: 1427px) and (max-width: 1575px){
+    header > div:first-child::after {
+        width: 80%;
+    }
+}
+@media (min-width: 1700px) {
+    header > div:first-child::after {
+        right: 130px;
+        width: calc(78% - 130px);
+    }
+}
+header .container div:last-child {
+    background-color: transparent;
+}
+header .container div:last-child p {
+    background-color: #dfdfdf;
+    color: #636363;
+    font-weight: 600;
+    width: 80px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .container div:last-child i {
+    background-color: #ff5722;
+    height: 50px;
+    width: 50px;
+    right: -50px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+.main-area {
+    margin-top: 70px;
+}
+.main-area .container .box {
+    background-color: #f1f1f1;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.main-area .container .box .nested-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.main-area .container .box .nested-container .one {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #353535c2;
+}
+.main-area .container .box .nested-container .image {
+    width: 120px;
+    height: 120px;
+}
+.main-area .container .box .nested-container .image img {
+    width: 100%;
+    height: 100%;
+}
+.main-area .container .box .nested-container .text {
+    width: 70%;
+    margin-left: 20px;
+}
+.main-area .container .box .nested-container .text .icon-container {
+    display: flex;
+    color: var(--text-color);
+}
+.main-area .container .box .nested-container .text .icon-container p:not(:last-child) {
+    margin-right: 15px;
+}
+.main-area .container .box .nested-container .text .icon-container i {
+    margin-right: 5px;
+}
+.main-area .container .box .nested-container .text h1 {
+    color: #353535c2;
+    font-weight: 400;
+}
+@media (max-width: 340px) {
+    .main-area .container .box .nested-container .image {
+        width: 120px;
+        height: 120px;
+        margin: auto;
+    }
+    .main-area .container .box .nested-container .one {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%
+    }
+    .main-area .container .box .nested-container .text {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .main-area .container .box .nested-container .text h1 {
+        text-align: center;
+    }
+    .main-area .container .box .nested-container .text .icon-container p {
+        font-size: 13px;
+    }
+}
+@media (min-width: 341px) and (max-width: 696px) {
+    .main-area .container .box .nested-container .text .icon-container p {
+        font-size: 13px;
+    }
+    .main-area .container .box .nested-container .text {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
